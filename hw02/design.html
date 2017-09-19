@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <title>HTML show</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+
+<body>
+	<p>
+
+User-First Design <br> <br>
+
+- As a normal user, I can make posts that my followers can see <br>
+	* To make a post, I would go to the home page of the website and click a button that says, "Tweet" or "Make new post". It will lead me to another web page that allows me to type into a text box what I want to publish. I will then click the "Post" button on the page that will put the post online, appearing in all of the feeds of my followers and on my profile when viewed. <br>
+- As a normal user, I can follow other accounts <br>
+	* To follow other accounts, I go to the home page and click the search bar, then type in the username or name of the person I would like to follow. Then a list of user profile descriptions (showing name and username) is displayed that contain the entered criteria in the search bar. If I click a profile description, I will go to that user profile. I can click the follow button to follow that new user. Now when I am looking at my feed of posts of other users, I can see the new user's posts that I just followed. <br>
+- As a normal user, I can read posts of people I follow <br>
+	* I would go to the home page of the website. This will automatically have a feed of the latest 15 posts of the users that I follow in chronological order. I can click a button that chooses to load more posts following the initial home page's posts. <br>
+- As a normal user, I can delete my account <br>
+	* To delete my account, I would click the link to my profile page on the home page of the website. Then I would click the settings button (that is only visible on my own profile page to myself, I cannot see anyone else's setting buttons nor can they see mine). There is a button that says "Delete account" on the page and once I click it, it will delete my account, erasing my profile page, all of my posts and "likes" on other posts, and no other users will follow me/I will not be following any other users.
+- As a normal user, I can "like" other posts <br>
+	* To like posts, I would see them in one of two ways. Either the post is appearing on my feed in the home page, or I made a search for a user profile in the search bar on the home page and clicked on a profile that displayed all of that user's posts. Either way, once I see the post, there will be a small heart in the corner of each post and when I click it, it will add a like to that post. The post will display a count of how many likes it has received. Each post can only be liked by an individual user once.
+	<br><br> 
+
+Data-First Design <br><br>
+
+- Users<br>
+	* Email address<br>
+	* Username<br>
+	* Posts<br>
+	* Followers<br>
+	* Following<br><br>
+- Posts<br>
+	* Reference to user<br>
+	* Text content of the post<br>
+	* Date<br>
+	* Like count<br>
+
+RESTful Routes:<br>
+Users can "create" more posts by clicking the make a post button on the home page, then being directed to a new page and clicking post after entering their text content<br>
+You can "retrieve" the posts you create by going onto your own profile or seeing it appear in the feed on the home page<br>
+You can "update" your post by clicking edit on it<br>
+You can "delete" your post by clicking delete on it<br>
+The index of the posts is seen on the home page as a feed of the users that you follow including your own posts <br>
+You can fill out the form for new posts and click post<br>
+
+Constraints: You can't delete or edit posts that aren't your own. You can't see all posts of all users indexed on the home page, only the ones you follow. <br>
+
+- Followers<br>
+	* Reference to user<br>
+	* Users being followed<br><br>
+
+RESTful Routes:<br>
+Users can "create" more users they follow by following other users<br>
+You can "retrieve" the users you follow by clicking the number of "following" on your profile page<br>
+You can "update" the users you follow by clicking follow on the profile of the user you are following, and it will lead you to a page asking if you want to follow this person, if you click "yes" it will update<br>
+You can "delete" users you follow from your follow list by reclicking the follow button on their profile (which will display unfollow if you are already following them)<br>
+The index of the users you follow is seen by clicking the number of "following" on your profile page<br>
+You can have new followers by clicking follow on their profile<br>
+
+Constraints: You can't follow yourself</p>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>
